@@ -1,0 +1,25 @@
+create table if not exists genre (
+	id serial primary key,
+	name text not null  unique,
+	title  text,
+	the year of the genre formation text
+);
+create table if not exists performers (
+	id serial primary key,
+	name text not null  unique,
+	artist name text,
+	performers_id integer references genre(id)
+);
+create table if not exists works (
+	id serial primary key,
+	name text not null  unique,
+	album and year of appearance text,
+	works_id integer references performers(id)
+);
+create table if not exists track (
+	id serial primary key,
+	name text not null  unique,
+	track name text,
+	duration text,
+	track_id integer references works(id)
+);
